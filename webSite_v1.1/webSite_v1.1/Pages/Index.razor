@@ -1,0 +1,50 @@
+﻿@page "/"
+
+<PageTitle>Index</PageTitle>
+
+
+<div  class="IMainContainer">
+   @*  <img src="https://t4.ftcdn.net/jpg/05/54/52/13/360_F_554521329_ngmDQSjSrUSRnbK2xK0bkcprsinG9Xdv.jpg" /> *@
+</div>
+
+<div class="ICartContainer">
+    <div class="Card"></div>
+    <div class="Card"></div>
+    <div class="Card"></div>
+</div>
+
+<LCRenderEducation/>
+<TTimeLine/>
+
+
+<style>
+    .IMainContainer {
+        width:100%;
+        height:500px;
+        background-color:whitesmoke;
+        margin-bottom:20px;
+    }
+
+        .IMainContainer > img {
+        width:10%;
+    }
+
+    .ICartContainer{
+        width: 80%;
+        height: 300px;
+        display:flex;
+        justify-content: center;
+        margin:auto auto;
+        /* flex-direction:row; */
+       
+        
+    }
+
+        .ICartContainer .Card {
+            margin:10px;
+            width: 100%;
+            height:250px;
+         
+            background-color: whitesmoke;
+    }
+</style>

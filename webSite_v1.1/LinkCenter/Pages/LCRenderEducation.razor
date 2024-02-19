@@ -1,0 +1,50 @@
+﻿
+
+<h3>LCRenderEducation</h3>
+
+<div class="LCEdnDataContainer">
+@foreach(var _LEdnData in _tblEdnData)
+{
+    <section class="LCEdnDataContent">
+      <p class="LCEdntitle">@_LEdnData.TITLE</p>
+      <p class="LCEdnData">Year: @_LEdnData.YEAR<br />Standard  :@_LEdnData.CLASS<br />Institute:@_LEdnData.INSTITUTE<br />CGPA:@_LEdnData.PERCENTAGE</p>
+    </section>
+}
+</div>
+
+<style>
+    .LCEdnDataContainer{
+        width:90%;
+        margin:auto auto;
+        display:flex;
+        flex-direction:row;
+        justify-content:space-between;
+    }
+
+    .LCEdnDataContent{
+        width:35%;
+        padding:25px; 
+        margin:10px;
+        background-color:whitesmoke;
+        text-align:center;
+
+    }
+    .LCEdntitle {
+        font-weight:700;
+        font-size:22px;
+    }
+    .LCEdnData{
+        font-size:20px;
+
+    }
+</style>
+
+@code {
+
+    public List<tblEdnModal> _tblEdnData = new List<tblEdnModal>();
+
+    protected override void OnInitialized()
+    {
+        _tblEdnData = _dataServices.Education();
+    }
+}

@@ -1,0 +1,36 @@
+﻿<div class="navbar navbar-dark">
+    <div class="container-fluid">
+        <a href="">webSite_v1.1</a>
+        <button title="Navigation menu" class="navbar-toggler" @onclick="ToggleNavMenu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    </div>
+</div>
+
+<div class="@NavMenuCssClass nav-scrollable" @onclick="ToggleNavMenu">
+    <nav class="customStyle">
+        <a href="#">Home</a>
+        <a href="counter">Search</a>
+        <a href="fetchdata">About</a>
+    </nav>
+</div>
+
+
+
+<style>
+    .customStyle {
+        display: flex;
+        flex-direction: row;
+    }
+</style>
+
+@code {
+    private bool collapseNavMenu = true;
+
+    private string? NavMenuCssClass => collapseNavMenu ? "collapse" : null;
+
+    private void ToggleNavMenu()
+    {
+        collapseNavMenu = !collapseNavMenu;
+    }
+}
