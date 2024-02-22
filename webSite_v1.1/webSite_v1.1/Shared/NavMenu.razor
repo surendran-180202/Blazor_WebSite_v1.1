@@ -9,9 +9,17 @@
 
 <div class="@NavMenuCssClass nav-scrollable" @onclick="ToggleNavMenu">
     <nav class="customStyle">
-        <a href="#">Home</a>
-        <a href="counter">Search</a>
-        <a href="fetchdata">About</a>
+
+        <div class="Left"></div>
+        <div class="Center">
+            <input type="search" placeholder="Search something ..." />
+        </div>
+        <div class="Right">
+            <a href="#">Home</a>
+            <a href="counter">Search</a>
+            <a href="fetchdata">About</a>
+        </div>
+   
     </nav>
 </div>
 
@@ -19,9 +27,31 @@
 
 <style>
     .customStyle {
+
         display: flex;
         flex-direction: row;
     }
+
+    .customStyle a{
+        text-decoration:none;
+        font-weight: 800;
+        color:black;
+        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+    .Center input {
+        padding:8px 12px  8px 12px;
+        text-align:center;
+        border-radius:20px;
+        font-weight:500;
+        outline:none;
+        border:none;
+        box-shadow: inset 0 -3em 3em rgb(255 255 250 / 50%), 0 0 0 2px white;
+    }
+    .Right{
+
+    }
+
 </style>
 
 @code {

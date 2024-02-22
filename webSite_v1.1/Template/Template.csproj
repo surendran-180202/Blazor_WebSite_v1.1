@@ -6,4 +6,13 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\LinkCenter\LinkCenter.csproj" />
+    <ProjectReference Include="..\ProcessUnit\ProcessUnit.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\css\Images\" />
+  </ItemGroup>
+
 </Project>
